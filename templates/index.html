@@ -1,68 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
-      integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
-  </head>
+{% include "partials/header.html" %}
   <body>
-    <form action="/" method="post">
-      <input type="text" name="msg--send" id="sendMsg" />
-      <button type="button" id="sendbtn">제출</button>
-    </form>
+    <input
+      type="text"
+      name="nick--make"
+      id="nick--make"
+      placeholder="닉네임을 입력해주세요."
+    />
+    <input
+      type="text"
+      name="msg--send"
+      id="sendMsg"
+      placeholder="메시지를 입력해주세요."
+    />
+    <button type="button" id="msg--sendbtn">전송</button>
+    <div id = "jsChatNumDisplay"></div>
     <ul class="msgs" id="msgs"></ul>
-    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
-
+    {%include 'partials/scripts.html'%}
     <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyAwA8SJb9B7FrSi1qsMrLyCswXgVHk8pws",
-        authDomain: "mychatting-14f41.firebaseapp.com",
-        databaseURL: "https://mychatting-14f41.firebaseio.com",
-        projectId: "mychatting-14f41",
-        storageBucket: "mychatting-14f41.appspot.com",
-        messagingSenderId: "256370676781",
-        appId: "1:256370676781:web:0c7dc7a2e8d8e85e50d4a4",
-        measurementId: "G-5QYCQ556C0",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-
-      var db = firebase.firestore();
-      chats_ref = db.collection("chats").doc("chat");
-      msgs_ref = chats_ref.collection("msgs");
-
-      $("#sendbtn").on("click", function () {
-        $.ajax({
-          type: "POST",
-          url: "/chat",
-          data: { "msg--send": $("#sendMsg").val() },
-          success: function (response) {
-            console.log(response);
-          },
-        });
-      });
-
-      msgs_ref.doc("msg").onSnapshot(function (doc) {
-        $("#msgs").append(
-          $("<li/>", {
-            text: doc.data()["msg"],
-          })
-        );
-        console.log("Current data: ", doc.data());
-      });
-    </script>
+    https://firebase.google.com/docs/web/setup#available-libraries -->
   </body>
 </html>
