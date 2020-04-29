@@ -1,22 +1,10 @@
-{% include "partials/header.html" %}
-  <body>
-    <input
-      type="text"
-      name="nick--make"
-      id="nick--make"
-      placeholder="닉네임을 입력해주세요."
-    />
-    <input
-      type="text"
-      name="msg--send"
-      id="sendMsg"
-      placeholder="메시지를 입력해주세요."
-    />
-    <button type="button" id="msg--sendbtn">전송</button>
-    <div id = "jsChatNumDisplay"></div>
-    <ul class="msgs" id="msgs"></ul>
-    {%include 'partials/scripts.html'%}
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-    https://firebase.google.com/docs/web/setup#available-libraries -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {%include 'partials/i-head.html'%}
+  </head>
+  <body class="container home">
+    {%include 'layout/i-header.html'%} {%include 'layout/i-main.html'%}
+    {%include 'layout/i-footer.html'%} {%include 'partials/scripts.html'%}
   </body>
 </html>
