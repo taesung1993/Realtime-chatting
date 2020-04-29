@@ -1,0 +1,21 @@
+.home .home__footer .home__footer__line {
+  border-bottom: 1px solid white;
+}
+
+.home .home__footer .home__footer__copyright {
+  text-align: center;
+}
+
+.chat .chat__footer .chat__footer__line {
+  border-bottom: 1px solid #2f3542;
+}
+
+.chat .chat__footer .chat__footer__copyright {
+  margin: 0;
+  box-sizing: border-box;
+  padding-top: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2f3542;
+}

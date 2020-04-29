@@ -1,0 +1,92 @@
+.home .home__main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .home__main .question--nick {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.home .home__main input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  caret-color: white;
+}
+
+.home__main input:focus {
+  outline: none;
+}
+
+.chat__main .chat__room {
+  width: 70%;
+  height: 83%;
+  border: 1px solid black;
+  position: relative;
+}
+
+.chat__main .chat__room .msgs {
+  background-color: white;
+  padding-left: 5px;
+  height: 88%;
+  overflow-y: scroll;
+}
+
+.chat__main .chat__room .msgs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.chat__main .chat__room .msgs .user--num {
+  display: inline;
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  z-index: 10;
+}
+
+.chat__main .chat__room .msgs .msg--broadcast {
+  display: flex;
+  justify-content: center;
+  color: #0984e3;
+}
+
+.chat__main .chat__room .msgs .msg__name {
+  font-weight: 700;
+}
+
+.chat__main .chat__room .input-wrap {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid #8395a7;
+  background-color: white;
+}
+
+.chat__main .chat__room .input-wrap input {
+  width: 92%;
+  padding: 10px 5px;
+  border: none;
+}
+
+.chat__main .chat__room .input-wrap input:focus {
+  outline: none;
+}
+
+.chat__main .chat__room .input-wrap button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #54a0ff;
+}

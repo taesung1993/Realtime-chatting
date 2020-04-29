@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+}
+
+body.home {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.24),
+      rgba(0, 0, 0, 0.678)
+    ),
+    url(../images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+}
+
+body.chat {
+  background-color: #f1f1f1;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: grid;
+  grid-template-rows: [row1-start] 25% [row1-end row2-start] 70% [row2-end];
+}
